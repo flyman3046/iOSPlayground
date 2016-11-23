@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5411C851DE54F3E00FBAED2 /* BasicComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5411C841DE54F3E00FBAED2 /* BasicComponentViewController.swift */; };
 		A5A08E841DE40A3B005E83A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A08E831DE40A3B005E83A4 /* AppDelegate.swift */; };
 		A5A08E861DE40A3B005E83A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A08E851DE40A3B005E83A4 /* ViewController.swift */; };
 		A5A08E891DE40A3B005E83A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A08E871DE40A3B005E83A4 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5411C841DE54F3E00FBAED2 /* BasicComponentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicComponentViewController.swift; sourceTree = "<group>"; };
 		A5A08E801DE40A3B005E83A4 /* iOSPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A08E831DE40A3B005E83A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5A08E851DE40A3B005E83A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				A5A08E831DE40A3B005E83A4 /* AppDelegate.swift */,
 				A5A08E851DE40A3B005E83A4 /* ViewController.swift */,
 				A5A08E871DE40A3B005E83A4 /* Main.storyboard */,
+				A5411C841DE54F3E00FBAED2 /* BasicComponentViewController.swift */,
 				A5A08E8A1DE40A3B005E83A4 /* Assets.xcassets */,
 				A5A08E8C1DE40A3B005E83A4 /* LaunchScreen.storyboard */,
 				A5A08E8F1DE40A3B005E83A4 /* Info.plist */,
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5411C851DE54F3E00FBAED2 /* BasicComponentViewController.swift in Sources */,
 				A5A08E861DE40A3B005E83A4 /* ViewController.swift in Sources */,
 				A5A08E841DE40A3B005E83A4 /* AppDelegate.swift in Sources */,
 			);
@@ -404,6 +408,7 @@
 				A5A08E9F1DE40A3C005E83A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5A08EA01DE40A3C005E83A4 /* Build configuration list for PBXNativeTarget "iOSPlaygroundTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +417,7 @@
 				A5A08EA21DE40A3C005E83A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
