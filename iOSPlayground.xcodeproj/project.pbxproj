@@ -14,6 +14,7 @@
 		A5A08E8B1DE40A3B005E83A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5A08E8A1DE40A3B005E83A4 /* Assets.xcassets */; };
 		A5A08E8E1DE40A3B005E83A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A08E8C1DE40A3B005E83A4 /* LaunchScreen.storyboard */; };
 		A5A08E991DE40A3C005E83A4 /* iOSPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A08E981DE40A3C005E83A4 /* iOSPlaygroundTests.swift */; };
+		A5E2622A1DE75F3D00214082 /* AdvancedComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E262291DE75F3D00214082 /* AdvancedComponentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		A5A08E941DE40A3C005E83A4 /* iOSPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A08E981DE40A3C005E83A4 /* iOSPlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSPlaygroundTests.swift; sourceTree = "<group>"; };
 		A5A08E9A1DE40A3C005E83A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5E262291DE75F3D00214082 /* AdvancedComponentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedComponentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				A5A08E831DE40A3B005E83A4 /* AppDelegate.swift */,
 				A5A08E851DE40A3B005E83A4 /* ViewController.swift */,
 				A5A08E871DE40A3B005E83A4 /* Main.storyboard */,
+				A5E262291DE75F3D00214082 /* AdvancedComponentsViewController.swift */,
 				A5411C841DE54F3E00FBAED2 /* BasicComponentViewController.swift */,
 				A5A08E8A1DE40A3B005E83A4 /* Assets.xcassets */,
 				A5A08E8C1DE40A3B005E83A4 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 				TargetAttributes = {
 					A5A08E7F1DE40A3B005E83A4 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = LK2QK77G8V;
 						ProvisioningStyle = Automatic;
 					};
 					A5A08E931DE40A3C005E83A4 = {
@@ -202,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E2622A1DE75F3D00214082 /* AdvancedComponentsViewController.swift in Sources */,
 				A5411C851DE54F3E00FBAED2 /* BasicComponentViewController.swift in Sources */,
 				A5A08E861DE40A3B005E83A4 /* ViewController.swift in Sources */,
 				A5A08E841DE40A3B005E83A4 /* AppDelegate.swift in Sources */,
@@ -341,7 +346,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LK2QK77G8V;
 				INFOPLIST_FILE = iOSPlayground/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyman3046.iOSPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,7 +360,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LK2QK77G8V;
 				INFOPLIST_FILE = iOSPlayground/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyman3046.iOSPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
