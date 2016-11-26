@@ -13,7 +13,7 @@ class BasicComponentViewController: UIViewController {
     @IBOutlet weak var myButton: UIButton!
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var mySwitch: UISwitch!
-    
+    @IBOutlet weak var mySlider: UISlider!
     
     
     override func viewDidLoad() {
@@ -52,6 +52,9 @@ class BasicComponentViewController: UIViewController {
     @IBAction func switchClicked(_ sender: UISwitch) {
         myLabel.text = "switch is clicked"
         
+    }
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        myLabel.text = String(Int(sender.value))
     }
     
 

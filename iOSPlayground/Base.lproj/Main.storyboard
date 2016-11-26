@@ -242,8 +242,11 @@
                                             <action selector="switchClicked:" destination="Myd-eH-ta3" eventType="touchUpInside" id="cfO-0k-qn7"/>
                                         </connections>
                                     </switch>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qzP-th-lXp">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qzP-th-lXp">
                                         <rect key="frame" x="6" y="450" width="363" height="31"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="Myd-eH-ta3" eventType="valueChanged" id="6zS-VK-KKO"/>
+                                        </connections>
                                     </slider>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k87-B9-AjT">
                                         <rect key="frame" x="8" y="488" width="25" height="30"/>
@@ -325,6 +328,7 @@
                     <connections>
                         <outlet property="myButton" destination="CPu-c0-2wl" id="MjO-vC-XIc"/>
                         <outlet property="myLabel" destination="c0L-1v-tH6" id="Zvh-2X-haJ"/>
+                        <outlet property="mySlider" destination="qzP-th-lXp" id="X23-bW-dev"/>
                         <outlet property="mySwitch" destination="jz4-UY-des" id="cCj-6f-56a"/>
                     </connections>
                 </viewController>
