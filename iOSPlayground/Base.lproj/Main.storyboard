@@ -613,10 +613,10 @@
             </objects>
             <point key="canvasLocation" x="2096.8000000000002" y="5886.2068965517246"/>
         </scene>
-        <!--View Controller-->
+        <!--Pod View Controller-->
         <scene sceneID="cYa-vB-eKI">
             <objects>
-                <viewController storyboardIdentifier="Pod" id="Iz5-qu-sQN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Pod" id="Iz5-qu-sQN" customClass="PodViewController" customModule="iOSPlayground" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9K5-l1-Rl2"/>
                         <viewControllerLayoutGuide type="bottom" id="5tb-7j-bqx"/>

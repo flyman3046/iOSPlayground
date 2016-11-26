@@ -1,0 +1,12 @@
+PODS:
+  - JTFadingInfoView (1.0.2)
+
+DEPENDENCIES:
+  - JTFadingInfoView
+
+SPEC CHECKSUMS:
+  JTFadingInfoView: 9fcb410da4bf8e3ce722b04b14ee0046a8f13a65
+
+PODFILE CHECKSUM: ccdb475c34c3dede0c2bd4ef497a75788ba325ff
+
+COCOAPODS: 1.1.1
