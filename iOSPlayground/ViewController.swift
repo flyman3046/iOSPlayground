@@ -30,6 +30,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
     }
     
+    
+    
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection : Int) -> Int {
         return self.animals.count

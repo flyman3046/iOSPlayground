@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -194,7 +195,7 @@
             </objects>
             <point key="canvasLocation" x="2809" y="3794"/>
         </scene>
-        <!--Hello-->
+        <!--Basic Component View Controller-->
         <scene sceneID="e41-db-nRx">
             <objects>
                 <viewController storyboardIdentifier="Basic Components" id="Myd-eH-ta3" customClass="BasicComponentViewController" customModule="iOSPlayground" customModuleProvider="target" sceneMemberID="viewController">
@@ -206,41 +207,131 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssJ-Zu-zYG">
-                                <rect key="frame" x="64" y="239" width="120" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCf-Hc-LcF">
-                                <rect key="frame" x="64" y="388" width="120" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPu-c0-2wl">
-                                <rect key="frame" x="64" y="111" width="120" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfd-7C-Yti">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mEl-rI-PIs">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="238.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0L-1v-tH6">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8bw-hk-mlC">
+                                                <rect key="frame" x="0.0" y="20.5" width="375" height="2"/>
+                                            </progressView>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aeh-33-ATI">
+                                                <rect key="frame" x="0.0" y="22.5" width="375" height="216"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="501745914.47974801">
+                                                    <!--2016-11-25 05:51:54 +0000-->
+                                                </date>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2Y-aR-XmF">
+                                        <rect key="frame" x="0.0" y="293.5" width="375" height="44"/>
+                                        <items>
+                                            <barButtonItem title="Item" id="o1b-fF-4uQ"/>
+                                        </items>
+                                    </toolbar>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jz4-UY-des">
+                                        <rect key="frame" x="74" y="395" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchClicked:" destination="Myd-eH-ta3" eventType="touchUpInside" id="cfO-0k-qn7"/>
+                                        </connections>
+                                    </switch>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qzP-th-lXp">
+                                        <rect key="frame" x="6" y="450" width="363" height="31"/>
+                                    </slider>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k87-B9-AjT">
+                                        <rect key="frame" x="8" y="488" width="25" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CPu-c0-2wl">
+                                        <rect key="frame" x="0.0" y="-43" width="375" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="Back">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Button">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="24"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="Myd-eH-ta3" eventType="touchUpInside" id="TyE-we-o10"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="k87-B9-AjT" firstAttribute="top" secondItem="qzP-th-lXp" secondAttribute="bottom" constant="8" symbolic="YES" id="2bt-Ev-ALe"/>
+                                    <constraint firstAttribute="trailing" secondItem="mEl-rI-PIs" secondAttribute="trailing" id="3Xc-x5-sh0"/>
+                                    <constraint firstItem="mEl-rI-PIs" firstAttribute="centerX" secondItem="bfd-7C-Yti" secondAttribute="centerX" id="LgC-AR-fTY"/>
+                                    <constraint firstItem="mEl-rI-PIs" firstAttribute="leading" secondItem="bfd-7C-Yti" secondAttribute="leading" id="PBf-b8-qvm"/>
+                                    <constraint firstItem="mEl-rI-PIs" firstAttribute="top" secondItem="bfd-7C-Yti" secondAttribute="top" id="Phc-kN-crp"/>
+                                    <constraint firstItem="qzP-th-lXp" firstAttribute="leading" secondItem="k87-B9-AjT" secondAttribute="leading" id="Poh-xj-rwp"/>
+                                    <constraint firstAttribute="bottom" secondItem="mEl-rI-PIs" secondAttribute="bottom" constant="292" id="QYF-Fs-CXM"/>
+                                    <constraint firstItem="qzP-th-lXp" firstAttribute="top" secondItem="jz4-UY-des" secondAttribute="bottom" constant="24" id="Qcu-CQ-PdT"/>
+                                    <constraint firstItem="mEl-rI-PIs" firstAttribute="leading" secondItem="C2Y-aR-XmF" secondAttribute="leading" id="bBP-gp-5pt"/>
+                                    <constraint firstItem="mEl-rI-PIs" firstAttribute="trailing" secondItem="C2Y-aR-XmF" secondAttribute="trailing" id="fzk-NQ-dyS"/>
+                                    <constraint firstItem="jz4-UY-des" firstAttribute="leading" secondItem="bfd-7C-Yti" secondAttribute="leading" constant="74" id="hql-7G-XiF"/>
+                                    <constraint firstItem="mEl-rI-PIs" firstAttribute="centerX" secondItem="qzP-th-lXp" secondAttribute="centerX" id="rnA-fV-46e"/>
+                                    <constraint firstItem="qzP-th-lXp" firstAttribute="top" secondItem="bfd-7C-Yti" secondAttribute="top" constant="450" id="u7E-zu-3mg"/>
+                                    <constraint firstItem="C2Y-aR-XmF" firstAttribute="top" secondItem="mEl-rI-PIs" secondAttribute="bottom" constant="55" id="xOx-iH-g84"/>
+                                    <constraint firstItem="qzP-th-lXp" firstAttribute="leading" secondItem="bfd-7C-Yti" secondAttribute="leadingMargin" id="yT1-ty-Aoc"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bfd-7C-Yti" firstAttribute="bottom" secondItem="Wgk-c4-uN0" secondAttribute="top" id="9Ku-25-5Fq"/>
+                            <constraint firstItem="bfd-7C-Yti" firstAttribute="leading" secondItem="mlH-gI-Hvs" secondAttribute="leading" id="I4o-4z-U1A"/>
+                            <constraint firstItem="bfd-7C-Yti" firstAttribute="top" secondItem="jRp-zf-qdT" secondAttribute="bottom" id="NN9-tw-75e"/>
+                            <constraint firstAttribute="trailing" secondItem="bfd-7C-Yti" secondAttribute="trailing" id="ZQ1-zu-adm"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Hello" id="f6m-t9-5dF">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="myG-RM-bC0">
-                            <connections>
-                                <segue destination="urf-kl-jPg" kind="unwind" unwindAction="unwindToMainControllerWithSender:" id="UYB-Zo-4NU"/>
-                            </connections>
+                    <navigationItem key="navigationItem" id="f6m-t9-5dF">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="lyM-pq-W57">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="TAT-LG-KJl">
+                                <rect key="frame" x="16" y="11" width="67" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Back">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                                <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="Back">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Back">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="urf-kl-jPg" kind="unwind" unwindAction="unwindToMainControllerWithSender:" id="p01-B7-CRI"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myButton" destination="CPu-c0-2wl" id="MjO-vC-XIc"/>
+                        <outlet property="myLabel" destination="c0L-1v-tH6" id="Zvh-2X-haJ"/>
+                        <outlet property="mySwitch" destination="jz4-UY-des" id="cCj-6f-56a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6F-tm-KJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="urf-kl-jPg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2809" y="-609"/>
+            <point key="canvasLocation" x="2808.8000000000002" y="-609.44527736131943"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V3v-Uy-ye7">
@@ -563,4 +654,7 @@
             <point key="canvasLocation" x="2096.8000000000002" y="6591.4542728635688"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Back" width="13" height="21"/>
+    </resources>
 </document>
