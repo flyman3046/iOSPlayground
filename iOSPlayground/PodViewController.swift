@@ -8,9 +8,15 @@
 
 import UIKit
 import JTFadingInfoView
+import Alamofire
+import AlamofireImage
 
 class PodViewController: UIViewController {
 
+    @IBOutlet weak var myRequestButton: UIButton!
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var myImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +49,30 @@ class PodViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func buttonClicked(_ sender: UIButton) {
+        Alamofire.request("https://httpbin.org/get").responseJSON { response in
+            if let JSON = response.result.value {
+                //print("JSON: \(JSON)")
+                self.myLabel.text = "JSON: \(JSON)";
+            }
+        }
+        
+        Alamofire.request("https://httpbin.org/image/png").responseImage { response in
+            debugPrint(response)
+            
+            print(response.request!)
+            print(response.response!)
+            debugPrint(response.result)
+            
+            if let image = response.result.value {
+                print("image downloaded: \(image)")
+                self.myImageView.image = image
+            }
+            else {
+                print("no data received")
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation

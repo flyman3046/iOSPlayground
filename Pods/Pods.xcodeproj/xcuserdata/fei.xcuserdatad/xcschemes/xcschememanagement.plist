@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JTFadingInfoView-JTFadingInfoView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +47,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>20BDDD96FDAEDF4E3DECB056510AD565</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EFE4C70245EE2857D336B8B9FA4E825</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB2C0FDA282B8670D907EBF6E42DF11A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

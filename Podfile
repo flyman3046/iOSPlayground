@@ -6,7 +6,9 @@ target 'iOSPlayground' do
   use_frameworks!
 
   # Pods for iOSPlayground
-  pod "JTFadingInfoView"
+  pod 'JTFadingInfoView'
+  pod 'Alamofire', '~> 4.0'
+  pod 'AlamofireImage', '~> 3.1'
 
   target 'iOSPlaygroundTests' do
     inherit! :search_paths
