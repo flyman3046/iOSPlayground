@@ -10,38 +10,45 @@ import UIKit
 import JTFadingInfoView
 import Alamofire
 import AlamofireImage
+import SwiftyJSON
 
-class PodViewController: UIViewController {
+class PodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var myRequestButton: UIButton!
-    @IBOutlet weak var myLabel: UILabel!
-    @IBOutlet weak var myImageView: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
+    var arrRes = [[String:AnyObject]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         
         // Do any additional setup after loading the view.
         print("Navigate to PodViewController")
-        setupInfoView()
+        
+        Alamofire.request("http://api.androidhive.info/contacts/").responseJSON { [weak weakSelf = self] (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                
+                if let resData = swiftyJsonVar["contacts"].arrayObject {
+                    weakSelf?.arrRes = resData as! [[String:AnyObject]]
+                }
+                if self.arrRes.count > 0 {
+                    weakSelf?.tableView.reloadData()
+                }
+            }
+        }
     }
     
-    func setupInfoView() {
-        let frame = CGRect(x : 100, y : 100, width : 100, height : 100)
-        let label = "This is a test"
-        
-        let infoView : JTFadingInfoView = JTFadingInfoView(frame : frame, label : label)
-        
-        infoView.isAnimationEnabled = true
-        infoView.isShadowEnabled = true
-        infoView.appearingDuration = 5.0
-        infoView.disappearingDuration = 2.0
-        infoView.displayDuration = 10.0
-        infoView.animationMovement = 40.0
-        
-        infoView.fadeInDirection = JTFadeInDirectionFromLeft
-        infoView.fadeOutDirection = JTFadeOutDirectionToBelow
-        
-        self.view.addSubview(infoView)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell : AlamoFireTableCell = tableView.dequeueReusableCell(withIdentifier: "reUseCell")! as! AlamoFireTableCell
+        var dict = arrRes[indexPath.row]
+        cell.nameLabel?.text = dict["name"] as? String
+        cell.emailLabel?.text = dict["email"] as? String
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrRes.count
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,31 +56,7 @@ class PodViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func buttonClicked(_ sender: UIButton) {
-        Alamofire.request("https://httpbin.org/get").responseJSON { response in
-            if let JSON = response.result.value {
-                //print("JSON: \(JSON)")
-                self.myLabel.text = "JSON: \(JSON)";
-            }
-        }
         
-        Alamofire.request("https://httpbin.org/image/png").responseImage { response in
-            debugPrint(response)
-            
-            print(response.request!)
-            print(response.response!)
-            debugPrint(response.result)
-            
-            if let image = response.result.value {
-                print("image downloaded: \(image)")
-                self.myImageView.image = image
-            }
-            else {
-                print("no data received")
-            }
-        }
-    }
-    
     /*
      // MARK: - Navigation
      

@@ -16,6 +16,7 @@
 		A5A08E8E1DE40A3B005E83A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A08E8C1DE40A3B005E83A4 /* LaunchScreen.storyboard */; };
 		A5A08E991DE40A3C005E83A4 /* iOSPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A08E981DE40A3C005E83A4 /* iOSPlaygroundTests.swift */; };
 		A5B12D681DE9409700EECF9F /* PodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B12D671DE9409700EECF9F /* PodViewController.swift */; };
+		A5C7DA611DF52FE5003556CE /* AlamoFireTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C7DA601DF52FE5003556CE /* AlamoFireTableCell.swift */; };
 		A5E2622A1DE75F3D00214082 /* AdvancedComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E262291DE75F3D00214082 /* AdvancedComponentsViewController.swift */; };
 		A826C0575139D4652C1C9F5E /* Pods_iOSPlaygroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E461EBBB7225223A5D4B840 /* Pods_iOSPlaygroundTests.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		A5A08E981DE40A3C005E83A4 /* iOSPlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSPlaygroundTests.swift; sourceTree = "<group>"; };
 		A5A08E9A1DE40A3C005E83A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5B12D671DE9409700EECF9F /* PodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodViewController.swift; sourceTree = "<group>"; };
+		A5C7DA601DF52FE5003556CE /* AlamoFireTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoFireTableCell.swift; sourceTree = "<group>"; };
 		A5E262291DE75F3D00214082 /* AdvancedComponentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedComponentsViewController.swift; sourceTree = "<group>"; };
 		D4E658F5423EE4C2F9AD014C /* Pods-iOSPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPlayground/Pods-iOSPlayground.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				A5A08E831DE40A3B005E83A4 /* AppDelegate.swift */,
 				A5A08E851DE40A3B005E83A4 /* ViewController.swift */,
 				A5B12D671DE9409700EECF9F /* PodViewController.swift */,
+				A5C7DA601DF52FE5003556CE /* AlamoFireTableCell.swift */,
 				A5A08E871DE40A3B005E83A4 /* Main.storyboard */,
 				A5E262291DE75F3D00214082 /* AdvancedComponentsViewController.swift */,
 				A5411C841DE54F3E00FBAED2 /* BasicComponentViewController.swift */,
@@ -343,6 +346,7 @@
 				A5E2622A1DE75F3D00214082 /* AdvancedComponentsViewController.swift in Sources */,
 				A5B12D681DE9409700EECF9F /* PodViewController.swift in Sources */,
 				A5411C851DE54F3E00FBAED2 /* BasicComponentViewController.swift in Sources */,
+				A5C7DA611DF52FE5003556CE /* AlamoFireTableCell.swift in Sources */,
 				A5A08E861DE40A3B005E83A4 /* ViewController.swift in Sources */,
 				A5A08E841DE40A3B005E83A4 /* AppDelegate.swift in Sources */,
 			);

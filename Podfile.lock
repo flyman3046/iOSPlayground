@@ -3,17 +3,20 @@ PODS:
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
   - JTFadingInfoView (1.0.2)
+  - SwiftyJSON (3.1.3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireImage (~> 3.1)
   - JTFadingInfoView
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   JTFadingInfoView: 9fcb410da4bf8e3ce722b04b14ee0046a8f13a65
+  SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
 
-PODFILE CHECKSUM: 8b124ee0642a3f18c7bbb4707b96f0f4650bb270
+PODFILE CHECKSUM: c17435fb5c1b7a87d36dd7c43fbdaf67e0d28279
 
 COCOAPODS: 1.1.1

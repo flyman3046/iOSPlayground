@@ -9,6 +9,7 @@ target 'iOSPlayground' do
   pod 'JTFadingInfoView'
   pod 'Alamofire', '~> 4.0'
   pod 'AlamofireImage', '~> 3.1'
+  pod 'SwiftyJSON'
 
   target 'iOSPlaygroundTests' do
     inherit! :search_paths
